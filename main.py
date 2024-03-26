@@ -22,3 +22,9 @@ cursor.execute("SELECT * FROM authors")
 prvy_autor = cursor.fetchone()
 print(prvy_autor)
 
+cursor.execute("SELECT * FROM authors ORDER BY author_id DESC")
+posledny_autor = cursor.fetchone()
+print(posledny_autor)
+
+cursor.close()
+conn.close()
